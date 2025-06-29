@@ -1,0 +1,76 @@
+//code=1
+
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Son son = new Son();
+        son.company();
+        son.car();
+        son.ownProperty();
+    }
+}
+
+class Grandfather {
+    void company() {
+        System.out.println("Grandfather's company: ABC Ltd.");
+    }
+}
+
+class Father extends Grandfather {
+    void car() {
+        System.out.println("Father's car: BMW.");
+    }
+}
+
+class Son extends Father {
+    void ownProperty() {
+        System.out.println("Son's property: Gaming PC.");
+    }
+}
+
+
+
+//code=2
+
+public class HierarchicalInheritanceDemo {
+    public static void main(String[] args) {
+        Doctor doc = new Doctor();
+        Teacher teach = new Teacher();
+        Engineer eng = new Engineer();
+
+        System.out.println("Doctor:");
+        doc.displayInfo();
+        doc.work();
+
+        System.out.println("\nTeacher:");
+        teach.displayInfo();
+        teach.work();
+
+        System.out.println("\nEngineer:");
+        eng.displayInfo();
+        eng.work();
+    }
+}
+
+class Person {
+    void displayInfo() {
+        System.out.println("I am a person.");
+    }
+}
+
+class Doctor extends Person {
+    void work() {
+        System.out.println("I treat patients.");
+    }
+}
+
+class Teacher extends Person {
+    void work() {
+        System.out.println("I teach students.");
+    }
+}
+
+class Engineer extends Person {
+    void work() {
+        System.out.println("I build and design systems.");
+    }
+}

@@ -1,0 +1,65 @@
+//code=1public class Main {
+    public static void main(String[] args) {
+        Animal genericAnimal = new Animal();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        genericAnimal.sound();
+        dog.sound();
+        cat.sound();
+    }
+}
+
+class Animal {
+    public void sound() {
+        System.out.println("Some generic sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+
+
+//code=2
+
+
+public class Shape {
+    public void draw() {
+        System.out.println("Drawing shape");
+    }
+
+    public static void main(String[] args) {
+        Shape genericShape = new Shape();
+        Circle circle = new Circle();
+        Rectangle rectangle = new Rectangle();
+        genericShape.draw();
+        circle.draw();
+        rectangle.draw();
+        System.out.println("Execution time: 02:24 AM +06, Monday, June 30, 2025");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+class Rectangle extends Shape {
+    @Override
+    public void draw() {
+        System.out.println("Drawing Rectangle");
+    }
+}

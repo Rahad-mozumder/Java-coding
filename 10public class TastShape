@@ -1,0 +1,75 @@
+//code=1
+
+public class TestShape {
+    public static void main(String[] args) {
+        Shape s1 = new Circle(5);
+        Shape s2 = new Rectangle(4, 6);
+        s1.area();
+        s2.area();
+        System.out.println("Execution time: 02:34 AM +06, Monday, June 30, 2025");
+    }
+}
+
+abstract class Shape {
+    abstract void area();
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    void area() {
+        System.out.println("Area of Circle: " + (Math.PI * radius * radius));
+    }
+}
+
+class Rectangle extends Shape {
+    double length;
+    double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    void area() {
+        System.out.println("Area of Rectangle: " + (length * width));
+    }
+}
+
+
+
+//code=2
+
+public class TestCode {
+    public static void main(String[] args) {
+        ATMService dbblATM = new DBBL();
+        dbblATM.withdraw();
+        dbblATM.deposit();
+        dbblATM.checkBalance();
+        System.out.println("Execution time: 02:37 AM +06, Monday, June 30, 2025");
+    }
+}
+
+interface ATMService {
+    void withdraw();
+    void deposit();
+    void checkBalance();
+}
+
+class DBBL implements ATMService {
+    public void withdraw() {
+        System.out.println("Withdraw money from DBBL");
+    }
+
+    public void deposit() {
+        System.out.println("Deposit money to DBBL");
+    }
+
+    public void checkBalance() {
+        System.out.println("Check balance in DBBL");
+    }
+}

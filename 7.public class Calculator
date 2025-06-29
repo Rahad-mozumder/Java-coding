@@ -1,0 +1,46 @@
+//code=1
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public float add(float a, float b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        int intSum = calc.add(5, 3);
+        System.out.println("Sum of integers 5 and 3: " + intSum);
+        float floatSum = calc.add(5.5f, 3.2f);
+        System.out.println("Sum of floats 5.5 and 3.2: " + floatSum);
+        int tripleSum = calc.add(2, 3, 4);
+        System.out.println("Sum of integers 2, 3, and 4: " + tripleSum);
+    }
+}
+
+
+//code=2
+
+public class Shape {
+    public double area(double length, double width) {
+        return length * width;
+    }
+
+    public double area(double radius) {
+        return 3.14159 * radius * radius;
+    }
+
+    public static void main(String[] args) {
+        Shape shape = new Shape();
+        double rectArea = shape.area(5.0, 3.0);
+        System.out.println("Area of rectangle (5.0 x 3.0): " + rectArea);
+        double circleArea = shape.area(2.0);
+        System.out.println("Area of circle (radius 2.0): " + circleArea);
+    }
+}

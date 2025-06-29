@@ -1,0 +1,81 @@
+//code=1
+
+public class TestCode {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.setName("Rahadul islam");
+        s1.setId("E243022");
+        s1.setCgpa(2.00);
+        System.out.println("Student Info:");
+        System.out.println("Name: " + s1.getName());
+        System.out.println("ID: " + s1.getId());
+        System.out.println("CGPA: " + s1.getCgpa());
+    }
+}
+
+class Student {
+    private String name;
+    private String id;
+    private double cgpa;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCgpa(double cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public double getCgpa() {
+        return cgpa;
+    }
+}
+
+
+//code=2
+
+public class TestBank {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.setAccountHolder("Fardin Islam");
+        acc.setAccountNumber("123456789");
+        acc.setBalance(5000.00);
+        acc.displayAccountInfo();
+    }
+}
+
+class BankAccount {
+    private String accountHolder;
+    private String accountNumber;
+    private double balance;
+
+    public void setAccountHolder(String accountHolder) {
+        this.accountHolder = accountHolder;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void displayAccountInfo() {
+        System.out.println("Account Holder: " + accountHolder);
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+    }
+}
